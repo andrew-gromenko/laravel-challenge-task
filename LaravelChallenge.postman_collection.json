@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "a640bb0b-b460-4497-963c-bd187468047c",
+		"name": "LaravelChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save_company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"id\": \"66283ffa\",\n            \"name\": \"Padberg Inc\",\n            \"started_at\": \"1983-10-29\",\n            \"users\": [\n                {\n                    \"id\": \"53d4413\",\n                    \"name\": \"Destany Cronin\",\n                    \"age\": 45\n                }\n            ]\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/companies/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/companies?min_age=39&max_age=47",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "min_age",
+							"value": "39"
+						},
+						{
+							"key": "max_age",
+							"value": "47"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
